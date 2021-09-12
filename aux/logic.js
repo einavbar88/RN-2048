@@ -34,6 +34,7 @@ const checkNoNewRenders = (board) => {
 }
 
 const checkIsGameOver = (board) => {
+    if (!checkNoNewRenders(board)) return false
     for (let i = 0; i < board.length; i++)
         for (let j = 0; j < board[i].length - 1; j++) {
             if (board[i][j] == null)
